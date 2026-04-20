@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redwood & Co. — Interior & Exterior Painters in Portland, OR</title>
+<meta name="description" content="Licensed, insured interior and exterior painters in Portland. Eighteen years, fixed-price quotes, five-year workmanship warranty. Get a free quote in 48 hours.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/chrome.css">
+<link rel="stylesheet" href="css/page.css">
+
+<script src="data.js"></script>
+
+<!-- JSON-LD: LocalBusiness (injected on load from data) -->
+<script id="ld-local" type="application/ld+json"></script>
+<script id="ld-faq" type="application/ld+json"></script>
+</head>
+<body>
+
+<div id="headerMount"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=2400&q=80')"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow eyebrow-dot">Portland · Since 2008 · CCB #198422</div>
+          <h1>
+            <span class="line">Interior &amp;</span>
+            <span class="line">exterior painting,</span>
+            <span class="line"><em>done properly.</em></span>
+          </h1>
+          <p class="hero-sub">Two coats on every wall, hand-brushed trim, fixed-price quotes, and a five-year workmanship warranty. We've painted over 2,400 Portland homes — and we'd like yours to be next.</p>
+          <div class="hero-meta">
+            <span>4.9★ · 412 reviews</span>
+            <span class="dot"></span>
+            <span>Typical reply · 2 hrs</span>
+            <span class="dot"></span>
+            <span>Free estimates</span>
+          </div>
+        </div>
+        <div class="hero-form-card">
+          <div class="pill-row"><span class="pill">2hr reply</span></div>
+          <h4>Free, fixed-price quote</h4>
+          <div class="sub">No pressure. We'll text or email back by end of day.</div>
+          <div id="heroFormMount"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div id="trustMount"></div>
+
+  <!-- SERVICES GRID -->
+  <section class="services" id="services">
+    <div class="container-wide">
+      <div class="section-label">
+        <span class="num">01 · Services</span>
+        <span class="tag">Portland metro &amp; West side</span>
+      </div>
+      <h2 style="max-width:16ch;margin-bottom:48px">Five kinds of painting, <span class="handmark">done one way.</span></h2>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container-wide">
+      <div class="section-label">
+        <span class="num">02 · Process</span>
+        <span class="tag">From walk-through to walkthrough</span>
+      </div>
+      <div class="process-header">
+        <h2>How <em style="font-style:italic;color:var(--brand)">we work.</em></h2>
+        <p>No mystery steps, no hidden fees, no &quot;we'll send you a quote sometime.&quot; Here's every stage of a typical Redwood project, from the first call to the last touch-up.</p>
+      </div>
+      <div class="process-steps" id="processSteps"></div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATORS -->
+  <section class="diffs" id="about">
+    <div class="container-wide">
+      <div class="section-label">
+        <span class="num">03 · What makes us different</span>
+        <span class="tag">Four things, worth saying out loud</span>
+      </div>
+      <h2>Not the <em>cheapest.</em><br>Not the biggest.<br>Just the most careful.</h2>
+      <div class="diffs-grid" id="diffsGrid"></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS CAROUSEL -->
+  <section class="reviews">
+    <div class="container-wide">
+      <div class="section-label">
+        <span class="num">04 · Reviews</span>
+        <span class="tag">Verified Google &amp; Yelp</span>
+      </div>
+      <div class="reviews-header">
+        <div class="left">
+          <h2>Four-hundred-plus Portland <em style="font-style:italic;color:var(--brand)">neighbors.</em></h2>
+          <div class="score-line">
+            <span class="big">4.9</span>
+            <span id="reviewStars"></span>
+            <span>Across 412 verified reviews</span>
+          </div>
+        </div>
+        <div class="reviews-nav">
+          <button id="revPrev" aria-label="Previous review">${""}</button>
+          <button id="revNext" aria-label="Next review">${""}</button>
+        </div>
+      </div>
+      <div class="reviews-track-wrap">
+        <div class="reviews-track" id="reviewsTrack"></div>
+      </div>
+      <div class="reviews-dots" id="reviewsDots"></div>
+      <div style="margin-top:48px;text-align:center">
+        <a href="reviews.html" class="btn btn-ghost">Read all 412 reviews ${""}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="service-area">
+    <div class="container">
+      <div class="section-label">
+        <span class="num">05 · Service area</span>
+        <span class="tag">30-mile radius of SE Portland</span>
+      </div>
+      <div class="service-area-grid">
+        <div>
+          <h2>Portland &amp; <em style="font-style:italic;color:var(--brand)">the west side.</em></h2>
+          <p class="lead">We work in a 30-mile radius of our SE Portland shop. If your city isn't listed, call — we've been known to make exceptions for the right job.</p>
+        </div>
+        <div class="cities" id="cities"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-label">
+        <span class="num">06 · Questions</span>
+        <span class="tag">Ten things people ask</span>
+      </div>
+      <div class="faq-grid">
+        <h2>Good <em style="font-style:italic;color:var(--brand)">questions.</em></h2>
+        <div id="faqMount"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="eyebrow" style="color:rgba(251,248,241,0.6);margin-bottom:24px">
+        <span class="eyebrow-dot">Ready when you are</span>
+      </div>
+      <div class="big-text">Let's paint your <em>next project.</em></div>
+      <div class="cta-grid">
+        <div class="cta-form">
+          <h4>Free, fixed-price quote in 48 hours</h4>
+          <div class="sub">Takes a minute. We'll text or email back by end of day.</div>
+          <div id="quoteFormMount"></div>
+        </div>
+        <div class="contact-options">
+          <a href="tel:+15035550142" class="contact-pill" data-track="call_click">
+            <div class="icon">${""}</div>
+            <div class="txt">
+              <span class="label">Call the shop</span>
+              <span class="val">(503) 555-0142</span>
+            </div>
+          </a>
+          <a href="sms:+15035550143" class="contact-pill" data-track="sms_click">
+            <div class="icon">${""}</div>
+            <div class="txt">
+              <span class="label">Text us</span>
+              <span class="val">(503) 555-0143</span>
+            </div>
+          </a>
+          <a href="mailto:hello@redwoodpainters.co" class="contact-pill">
+            <div class="icon">${""}</div>
+            <div class="txt">
+              <span class="label">Email</span>
+              <span class="val">hello@redwoodpainters.co</span>
+            </div>
+          </a>
+          <div style="padding:24px;border-top:1px solid rgba(251,248,241,0.15);margin-top:16px">
+            <div class="eyebrow" style="color:rgba(251,248,241,0.5);margin-bottom:12px">Hours</div>
+            <div style="font-size:14px;line-height:1.9;color:rgba(251,248,241,0.75);font-family:var(--mono)">
+              <div>Mon–Fri · 7:00 AM – 6:00 PM</div>
+              <div>Saturday · 8:00 AM – 2:00 PM</div>
+              <div>Sunday · Closed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footerMount"></div>
+<div id="mobileCtaMount"></div>
+<div id="scrollCtaMount"></div>
+<div id="exitModalMount"></div>
+
+<script src="js/ui.js"></script>
+<script>
+(function(){
+  const d = window.SITE_DATA;
+
+  // Chrome
+  document.getElementById('headerMount').innerHTML = window.renderHeader('home');
+  document.getElementById('trustMount').innerHTML = window.renderTrustBar();
+  document.getElementById('footerMount').innerHTML = window.renderFooter();
+  document.getElementById('mobileCtaMount').innerHTML = window.renderStickyMobileCTA();
+  document.getElementById('scrollCtaMount').innerHTML = window.renderScrollCTA();
+  document.getElementById('exitModalMount').innerHTML = window.renderExitModal();
+  document.getElementById('quoteFormMount').innerHTML = window.renderQuoteForm({ id: 'ctaQuote' });
+  document.getElementById('heroFormMount').innerHTML = window.renderQuoteForm({ id: 'heroQuote' });
+
+  document.getElementById('revPrev').innerHTML = window.iconChevron('left');
+  document.getElementById('revNext').innerHTML = window.iconChevron('right');
+  document.getElementById('reviewStars').innerHTML = window.renderStars(4.9);
+  document.querySelector('.reviews a.btn-ghost').innerHTML = 'Read all 412 reviews ' + window.iconArrow();
+  document.querySelectorAll('.contact-pill .icon')[0].innerHTML = window.iconPhone();
+  document.querySelectorAll('.contact-pill .icon')[1].innerHTML = window.iconSms();
+  document.querySelectorAll('.contact-pill .icon')[2].innerHTML = window.iconMail();
+
+  // Services grid — layout: first is "big" (featured), rest are std
+  const svgGrid = document.getElementById('servicesGrid');
+  const layout = ['big', 'std', 'std', 'std', 'std'];
+  svgGrid.innerHTML = d.services.map((s, i) => {
+    const cls = layout[i] || 'std';
+    const bg = cls === 'big' ? `<div class="bg-image" style="background-image:url('${s.hero_image}')"></div>` : '';
+    return `
+      <a href="service.html?s=${s.slug}" class="service-card ${cls}">
+        ${bg}
+        <span class="num">${String(i+1).padStart(2,'0')} · Service</span>
+        <h3>${s.name}</h3>
+        <p>${s.short_description}</p>
+        <div class="spacer"></div>
+        <span class="arrow">Learn more ${window.iconArrow()}</span>
+      </a>
+    `;
+  }).join('');
+
+  // Process steps
+  document.getElementById('processSteps').innerHTML = d.process_steps.map(p => `
+    <div class="process-step">
+      <span class="step-num">${p.step}</span>
+      <h4>${p.title}</h4>
+      <p>${p.detail}</p>
+    </div>
+  `).join('');
+
+  // Differentiators
+  document.getElementById('diffsGrid').innerHTML = d.differentiators.map((x, i) => `
+    <div class="diff-item">
+      <span class="index">${String(i+1).padStart(2,'0')} / ${String(d.differentiators.length).padStart(2,'0')}</span>
+      <h4>${x.title}</h4>
+      <p>${x.detail}</p>
+    </div>
+  `).join('');
+
+  // Reviews carousel
+  const track = document.getElementById('reviewsTrack');
+  const homeReviews = d.testimonials.slice(0, 6);
+  track.innerHTML = homeReviews.map(r => `
+    <article class="review-card" itemscope itemtype="https://schema.org/Review">
+      ${window.renderStars(r.rating)}
+      <blockquote itemprop="reviewBody">&ldquo;${r.text}&rdquo;</blockquote>
+      <div class="meta">
+        <span class="author" itemprop="author">${r.author}</span>
+        <span class="sub">${r.neighborhood} · ${new Date(r.date).toLocaleDateString('en-US',{month:'short',year:'numeric'})}</span>
+      </div>
+    </article>
+  `).join('');
+
+  let reviewIdx = 0;
+  const dots = document.getElementById('reviewsDots');
+  dots.innerHTML = homeReviews.map((_, i) => `<button data-i="${i}" class="${i===0?'active':''}" aria-label="Go to review ${i+1}"></button>`).join('');
+
+  function updateReviews() {
+    const card = track.querySelector('.review-card');
+    const gap = 24;
+    const w = card.offsetWidth + gap;
+    const max = track.scrollWidth - track.parentElement.offsetWidth;
+    const x = Math.min(reviewIdx * w, Math.max(0, max));
+    track.style.transform = `translateX(-${x}px)`;
+    dots.querySelectorAll('button').forEach((b, i) => b.classList.toggle('active', i === reviewIdx));
+    document.getElementById('revPrev').disabled = reviewIdx === 0;
+    document.getElementById('revNext').disabled = x >= max - 2;
+  }
+  document.getElementById('revPrev').addEventListener('click', () => { if (reviewIdx > 0) reviewIdx--; updateReviews(); });
+  document.getElementById('revNext').addEventListener('click', () => { reviewIdx++; updateReviews(); });
+  dots.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { reviewIdx = +b.dataset.i; updateReviews(); }));
+  window.addEventListener('resize', updateReviews);
+  setTimeout(updateReviews, 50);
+
+  // Cities
+  document.getElementById('cities').innerHTML = d.business.service_area.map((c, i) => `
+    <span class="city-chip ${c === d.business.primary_city ? 'primary' : ''}">${c}</span>
+  `).join('');
+
+  // FAQ
+  document.getElementById('faqMount').innerHTML = window.renderFAQAccordion(d.business_faqs);
+
+  // --- Schema ---
+  const localBiz = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+    "name": d.business.name,
+    "image": "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1200",
+    "telephone": d.business.phone,
+    "email": d.business.email,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": d.business.address,
+      "addressLocality": d.business.primary_city,
+      "addressRegion": d.business.primary_state,
+      "addressCountry": "US"
+    },
+    "priceRange": "$$",
+    "areaServed": d.business.service_area.map(c => ({"@type":"City","name":c})),
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": d.business.avg_rating,
+      "reviewCount": d.business.review_count
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": d.business.phone,
+      "contactType": "sales"
+    },
+    "openingHours": "Mo-Fr 07:00-18:00, Sa 08:00-14:00"
+  };
+  document.getElementById('ld-local').textContent = JSON.stringify(localBiz);
+
+  const faqLD = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": d.business_faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+    }))
+  };
+  document.getElementById('ld-faq').textContent = JSON.stringify(faqLD);
+})();
+</script>
+<script src="js/behaviors.js"></script>
+</body>
+</html>
